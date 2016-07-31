@@ -1,0 +1,20 @@
+{
+    "name": "tale/think-debug",
+    "description": "debug for thinkphp5",
+    "keywords": ["debug", "thinkphp5"],
+    "license": "Apache-2.0",
+    "authors": [{
+        "name": "tale",
+        "email": "zsj342973802@qq.com"
+    }],
+    "require": {
+        "topthink/think-queue": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "tale\\debug\\": "src",
+            "tale\\example\\": "example"
+        },
+        "files": ["src/helper.php"]
+    }
+}
