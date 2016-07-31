@@ -1,7 +1,7 @@
 <?php
-namespace tale\example;
+namespace tale\debug;
 
-use tale\debug\Tag;
+use tale\debug\lib\Tag;
 
 class TestController
 {
@@ -12,14 +12,14 @@ class TestController
         $logs = $debug->getLogList($tag, $page);
 
         $root = $debug->getRootMd5();
-        $rootUrl = url('index/test/index',['tag' => $root]);
+        $rootUrl = url('\tale\debug\TestController@index',['tag' => $root]);
 
         foreach ($logs as $val) {
             echo date('Y-m-d H:i:s',$val['time']) . '<br>';
             foreach ($val['tag'] as $v) {
                 echo '<a href="' . $rootUrl . '" title="root">root</a>';
                 foreach ($v as $key => $tag) {
-                    $url = url('index/test/index', ['tag' => $key]);
+                    $url = url('\tale\debug\TestController@index', ['tag' => $key]);
                     echo '-<a href="' . $url . '" title="' . $tag . '">' . $tag . '</a>';
                 }
                 echo ' | ';
