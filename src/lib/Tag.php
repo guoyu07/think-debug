@@ -1,5 +1,5 @@
 <?php
-namespace tale\debug;
+namespace tale\debug\lib;
 
 use think\queue\Queue;
 
