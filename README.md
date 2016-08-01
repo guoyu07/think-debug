@@ -1,2 +1,2 @@
-# think-deubg
+# think-debug
 debug for thinkphp5
