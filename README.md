@@ -1,2 +1,2 @@
-# think-installer
-installer for thinkphp5
+# think-deubg
+debug for thinkphp5
