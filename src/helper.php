@@ -4,7 +4,7 @@ use tale\debug\lib\Tag;
 use think\Config;
 use think\Route;
 
-Route::get('log/[:tag]','\tale\debug\TestController@index', ['tag' => '\w{32}']);
+Route::rule(['logs','log/[:tag]/[:page]'], '\tale\debug\TestController@index');
 
 function debug_log($var, $tag = '', $expire = null, $type = null)
 {
